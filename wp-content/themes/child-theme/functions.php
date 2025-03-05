@@ -1,4 +1,12 @@
 <?php
+
+function add_viewport_meta_tag()
+{
+    echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+}
+add_action('wp_head', 'add_viewport_meta_tag');
+
+
 function wizard_assets()
 {
     wp_enqueue_style('bootstrap-css', get_stylesheet_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css');
